@@ -60,19 +60,31 @@
 ////////////////////////////////
 // Yell at the Ninja Turtles
 ////////////////////////////////
-let ninjaTurtles = ['Donatello', 'Leonardo', 'Raphael', 'Michaelangelo']
+// let ninjaTurtles = ['Donatello', 'Leonardo', 'Raphael', 'Michaelangelo']
 
-let i = 0
-for (const turtle of ninjaTurtles) {
-    ninjaTurtles[i] = turtle.toUpperCase()
-    i++
-}
-console.log(ninjaTurtles)
+// let i = 0
+// for (const turtle of ninjaTurtles) {
+//     ninjaTurtles[i] = turtle.toUpperCase()
+//     i++
+// }
+// console.log(ninjaTurtles)
 ////////////////////////////////
 // Methods, Revisited
 ////////////////////////////////
+const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
 
-
+console.log(favMovies.indexOf('Titanic'))
+console.log(favMovies.sort())// put the array in alphabetical array and it is permanently changed
+favMovies.pop()
+favMovies.push('Guardians of the Galaxy')
+favMovies.reverse()
+favMovies.shift()
+favMovies.unshift()// returns length of the array
+favMovies.indexOf('Django Unchained')
+console.log(favMovies.splice(favMovies.indexOf('Django Unchained'), 1, 'Avatar'))// permanently alters array
+let slicedFavMovies = favMovies.slice(0, Math.floor(favMovies.length/2)) // does not alter original array
+console.log(slicedFavMovies)
+console.log(slicedFavMovies.indexOf('Fast and Furious'))// logs -1 for things that are outside of the array
 ////////////////////////////////
 // Where is Waldo
 ////////////////////////////////
