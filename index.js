@@ -88,8 +88,20 @@ console.log(slicedFavMovies.indexOf('Fast and Furious'))// logs -1 for things th
 ////////////////////////////////
 // Where is Waldo
 ////////////////////////////////
+const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
+                    ["Lucinda", "Jacc", "Neff", "Snoop"],
+                    ["Petunia", ["Baked Goods", "Waldo"]]];
+//whereIsWaldo.splice(whereIsWaldo.indexOf('Eggbert'),1)
 
-
+for(people of whereIsWaldo) {
+    if(typeof people != 'string') {
+        if(people.includes("Neff")) {
+            people.splice(people.indexOf("Neff"),1);
+            }
+         }
+         console.log(people);
+}
+console.log(whereIsWaldo)
 ////////////////////////////////
 //  Excited Kitten
 ////////////////////////////////
